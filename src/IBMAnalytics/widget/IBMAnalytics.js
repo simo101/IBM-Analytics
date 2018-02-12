@@ -4,6 +4,10 @@ import {
     runCallback,
 } from 'widget-base-helpers';
 
+import BMSClient from '@/lib/bmsclient';
+import BMSAnalytics from '@/lib/bmsanalytics';
+// import BMSRequest from '@/lib/bmsrequest';
+
 export default defineWidget('IBMAnalytics', false, {
 
     _obj: null,

@@ -23,8 +23,8 @@
             <category></category>
             <description></description>
             <enumerationValues>
-                 <enumerationValue key="REION_US_SOUTH">REION_US_SOUTH</enumerationValue>
-                 <enumerationValue key="REION_UK">REION_UK</enumerationValue>
+                 <enumerationValue key="REGION_US_SOUTH">REION_US_SOUTH</enumerationValue>
+                 <enumerationValue key="REGION_UK">REION_UK</enumerationValue>
                  <enumerationValue key="REGION_SYDNEY">REGION_SYDNEY</enumerationValue>
             </enumerationValues>
         </property>
