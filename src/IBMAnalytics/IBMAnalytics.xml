@@ -8,12 +8,12 @@
             <category>Appearance</category>
             <description>This key was added to make the widget work in the Modeler (needs atleast 1 key). Please change/remove this one</description>
         </property>
-        <property key="apiKey" type="string" required="" defaultValue="">
+        <!-- <property key="apiKey" type="string" required="false" defaultValue="">
             <caption>API Key</caption>
             <category></category>
             <description></description>
         </property>
-        <property key="instanceID" type="string" required="" defaultValue="">
+        <property key="instanceID" type="string" required="false" defaultValue="">
             <caption>Instance ID</caption>
             <category></category>
             <description></description>
@@ -37,11 +37,6 @@
                  <enumerationValue key="LIFECYCLE">LIFECYCLE</enumerationValue>
                  <enumerationValue key="NETWORK">NETWORK</enumerationValue>
             </enumerationValues>
-        </property>
-        <property key="instanceID" type="string" required="" defaultValue="">
-            <caption>Instance ID</caption>
-            <category></category>
-            <description></description>
-        </property>
+        </property> -->
     </properties>
 </widget>
