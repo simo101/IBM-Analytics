@@ -15,16 +15,43 @@ export default defineWidget('IBMAnalytics', false, {
 
     postCreate() {
         log.call(this, 'postCreate', this._WIDGET_VERSION);
+        var bmsregion;
+        switch(this.bmsRegion){
+            case 'REGION_US_SOUTH':
+                bmsregion = BMSClient.REGION_US_SOUTH;
+                break;
+            case 'REGION_UK':
+                bmsregion = BMSClient.REGION_UK;
+                break;
+            case 'REGION_SYDNEY':
+                bmsregion = BMSClient.REGION_SYDNEY;
+                break;
+            default:
+                bmsregion = BMSClient.REGION_US_SOUTH;
+                break;
+        }
 
-        var applicationName = 'com.ibm.bmsstarterweb';
-        var clientApiKey='2bd5ad2a-ff2a-459c-bf0a-9d2ec90a538e';
-        var bmsregion=BMSClient.REGION_US_SOUTH; // REGION_UK (for Region United Kingdom)/ REGION_SYDNEY ( for Region Sydney)
-        var deviceEvents=BMSAnalytics.DeviceEvents.ALL;  //BMSAnalytics.DeviceEvents.(NONE/ LIFECYCLE /NETWORK )
-        var instanceId = 'e22cf008-5c12-4662-9249-b74102c92dee';
+        var deviceEvents;
+
+        switch(this.bmsDevice){
+            case 'NONE':
+                deviceEvents = BMSAnalytics.DeviceEvents.NONE;
+                break;
+            case 'ALL':
+                deviceEvents = BMSAnalytics.DeviceEvents.ALL;
+                break;
+            case 'LIFECYCLE':
+                deviceEvents = BMSAnalytics.DeviceEvents.LIFECYCLE;
+                break;
+            default:
+                deviceEvents = BMSAnalytics.DeviceEvents.ALL;
+                break;
+        }
+
         var hasUserContext=true;
       
-        BMSClient.initialize(BMSClient.REGION_US_SOUTH);
-        BMSAnalytics.initialize(applicationName,clientApiKey,hasUserContext,deviceEvents,instanceId);
+        BMSClient.initialize(bmsregion);
+        BMSAnalytics.initialize(this.applicationName,this.apiKey,hasUserContext,deviceEvents,this.instanceID);
         BMSAnalytics.send();
     },
 });
