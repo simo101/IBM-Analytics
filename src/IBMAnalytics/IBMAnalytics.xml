@@ -1,0 +1,47 @@
+<widget id="IBMAnalytics.widget.IBMAnalytics" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>IBM Analytics</name>
+    <description>Dummy widget</description>
+    <icon/>
+    <properties>
+        <property key="applicationName" type="string" required="false" defaultValue="">
+            <caption>App Name</caption>
+            <category>Appearance</category>
+            <description>This key was added to make the widget work in the Modeler (needs atleast 1 key). Please change/remove this one</description>
+        </property>
+        <property key="apiKey" type="string" required="" defaultValue="">
+            <caption>API Key</caption>
+            <category></category>
+            <description></description>
+        </property>
+        <property key="instanceID" type="string" required="" defaultValue="">
+            <caption>Instance ID</caption>
+            <category></category>
+            <description></description>
+        </property>
+        <property key="bmsRegion" type="enumeration" defaultValue="first">
+            <caption>BMS Region</caption>
+            <category></category>
+            <description></description>
+            <enumerationValues>
+                 <enumerationValue key="REION_US_SOUTH">REION_US_SOUTH</enumerationValue>
+                 <enumerationValue key="REION_UK">REION_UK</enumerationValue>
+                 <enumerationValue key="REGION_SYDNEY">REGION_SYDNEY</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="bmsDevice" type="enumeration" defaultValue="first">
+            <caption>BMS Device</caption>
+            <category></category>
+            <description></description>
+            <enumerationValues>
+                 <enumerationValue key="ALL">ALL</enumerationValue>
+                 <enumerationValue key="LIFECYCLE">LIFECYCLE</enumerationValue>
+                 <enumerationValue key="NETWORK">NETWORK</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="instanceID" type="string" required="" defaultValue="">
+            <caption>Instance ID</caption>
+            <category></category>
+            <description></description>
+        </property>
+    </properties>
+</widget>
