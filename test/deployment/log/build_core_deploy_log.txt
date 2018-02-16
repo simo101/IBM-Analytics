@@ -1,0 +1,8 @@
+﻿Buildfile: C:\Users\sbl\Documents\Mendix\IBM\Analytics\test\deployment\build_core.xml
+
+deploy:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

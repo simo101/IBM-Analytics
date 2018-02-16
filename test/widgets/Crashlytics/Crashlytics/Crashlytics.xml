@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="Crashlytics.widget.Crashlytics" needsEntityContext="false" mobile="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Crashlytics</name>
+    <description>Crashlytics (fabric.io) integration.</description>
+
+    <icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAACCUlEQVQ4T4VSXUhTYRh+ztnGMXDS7dkOsoudi10EI2+8CBGsq6Bd9HNZ0EW7aRdSV0EIXigFapqhBGku2JaJSkJRaGjRr07ToZddFHTtAgVt8/N5t3NI18YeeDjf+7x/3/udF7WQDQZTuWAwL1yzrFlHro0uwLsajd752tJyWewskN8ClHAd2Keki14VkrwSCqVzmqY2DOPgk23Hl1kgx2TharmApxxdBUtNTfHvTF5jcImGUczqetG1v9UrMAlEP7MjuyrhCvkOeP8KuD0H3HoNvGFYzQJaDDj5CDi/COyykOKLcSpoZXcdzJtm8ksgoIQffD71FuCtS8n6UmtrnLzJV619fV4zN8+uLnnl+6LPNjZeWvB41IKuqzm//1opuBpeAhssolxOA4OijwMdnP2AVM+AC6INhsOWfI8hyXkzwE/hC2Bv2uv9kQiHDfE9AM48BNrlLL96xu/fnLHtG2JXQsvY9tW0z1dIseNUc3Oq07JOOD4kAGMqFHoivgz3ZLKySNI0zyUbGgpjDBCOcyfSgcDvTCTy9HkkMpa2rF+iuf4JFpkwTf48B8PAlcd0jP7jzgjw94hdpP3HtSWWOded9DL6OSZ3QRw7vcBZzp4foi2kts83aKM/z7MaAO4x5f89YWKMgaflzILbfQwW8jH3KOndwCn+44s8118yBt5lm48Oexy5AsAhI/zPk4+mzwQAAAAASUVORK5CYII=</icon>
+
+    <properties>
+        <property key="skip" type="string" required="false" defaultValue="">
+            <caption>Skip messages</caption>
+            <category>Behavior</category>
+            <description>Skip error messages containing these texts. Multiple texts can be separated by a "|". The comparison is not case sensitive.</description>
+        </property>
+    </properties>
+</widget>

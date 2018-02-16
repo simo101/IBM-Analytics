@@ -15,7 +15,7 @@
   "widget": {
     "package": "IBMAnalytics",
     "filesFolder": "widget",
-    "libraries": true,
+    "libraries": false,
     "core": false,
     "path": false
   },

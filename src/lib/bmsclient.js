@@ -21,5 +21,5 @@ var BMSClient = {
     }
 
 }
-
+window.BMSClient= BMSClient;
 module.exports = BMSClient;

@@ -1,0 +1,1 @@
+define(["IBMAnalytics/widget/IBMAnalytics", "MobileFeatures/widget/MobileFeatures"], {});
