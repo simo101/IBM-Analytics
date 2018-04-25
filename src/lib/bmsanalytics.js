@@ -2328,7 +2328,7 @@ function setInitParams(params) {
  	//deviceID, appName, apiKey,bmsregion,serveroverride;
  	function _init(appname,apikey,hasusercontext,deviceevents,instanceid){ //,
     	var dfd = BMSJQ.Deferred();
-    	console.log(window);
+    	// console.log(window);
 
     	var initOptions = {
         'applicationName' : appname,

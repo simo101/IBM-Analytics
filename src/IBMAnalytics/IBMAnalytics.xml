@@ -55,5 +55,11 @@
             <category>Setup</category>
             <description></description>
         </property>
+
+        <property key="enablePageTracking" type="boolean" defaultValue="false">
+            <caption>Enable page tracking</caption>
+            <category>Setup</category>
+            <description></description>
+        </property>
     </properties>
 </widget>

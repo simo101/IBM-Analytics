@@ -75,15 +75,29 @@ export default defineWidget('IBMAnalytics', false, {
 		if(this.enableUsageAnalytics){
 			BMSAnalytics.enable();
 		}
+		if(this.enablePageTracking){
+			this.connect(this.mxform, "onNavigation", this._addPage);
+		}
 	},
 	_reportError:function(error){
 			try {
 				const currentPage = mx.router._contentForm.path.replace(".page.xml", "");
-				BMSAnalytics.Logger.error(`${currentPage} : ${error}`);
+				BMSAnalytics.Logger.log(`${currentPage} : ${error}`);
 			} catch (e) {
 				BMSAnalytics.Logger.error(`${error}`);
 			}
 			BMSAnalytics.Logger.send();
 			console.log("sending " + error);
+	},
+	_addPage:function(){
+		try {
+			const currentPage = mx.router._contentForm.path.replace(".page.xml", "");
+			BMSAnalytics.log({'Page Tracker' : `${currentPage}`});
+			console.log("Page Tracker " + currentPage);
+		} catch (e) {
+			BMSAnalytics.Logger.error(`${e}`);
+			BMSAnalytics.Logger.send();
+		}
+		BMSAnalytics.send();
 	}
 });

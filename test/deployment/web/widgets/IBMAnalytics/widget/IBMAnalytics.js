@@ -199,17 +199,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		if (this.enableUsageAnalytics) {
 			__WEBPACK_IMPORTED_MODULE_2__lib_bmsanalytics___default.a.enable();
 		}
+		if (this.enablePageTracking) {
+			this.connect(this.mxform, "onNavigation", this._addPage);
+		}
 	},
 
 	_reportError: function _reportError(error) {
 		try {
 			var currentPage = mx.router._contentForm.path.replace(".page.xml", "");
-			__WEBPACK_IMPORTED_MODULE_2__lib_bmsanalytics___default.a.Logger.error(currentPage + ' : ' + error);
+			__WEBPACK_IMPORTED_MODULE_2__lib_bmsanalytics___default.a.Logger.log(currentPage + ' : ' + error);
 		} catch (e) {
 			__WEBPACK_IMPORTED_MODULE_2__lib_bmsanalytics___default.a.Logger.error('' + error);
 		}
 		__WEBPACK_IMPORTED_MODULE_2__lib_bmsanalytics___default.a.Logger.send();
 		console.log("sending " + error);
+	},
+	_addPage: function _addPage() {
+		try {
+			var currentPage = mx.router._contentForm.path.replace(".page.xml", "");
+			__WEBPACK_IMPORTED_MODULE_2__lib_bmsanalytics___default.a.log({ 'Page Tracker': '' + currentPage });
+			console.log("Page Tracker " + currentPage);
+		} catch (e) {
+			__WEBPACK_IMPORTED_MODULE_2__lib_bmsanalytics___default.a.Logger.error('' + e);
+			__WEBPACK_IMPORTED_MODULE_2__lib_bmsanalytics___default.a.Logger.send();
+		}
+		__WEBPACK_IMPORTED_MODULE_2__lib_bmsanalytics___default.a.send();
 	}
 }));
 
